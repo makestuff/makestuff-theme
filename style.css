@@ -1,0 +1,393 @@
+/*
+Theme Name: makestuff
+Theme URI: http://www.makestuff.eu
+Description: I wanted a cleaner theme. Cleaner implementation, cleaner look.
+Version: 0.1
+Author: Chris McClelland
+Author URI: http://www.makestuff.eu
+Tags: makestuff
+
+	Development Log
+	===============================================================
+	Sep 2, 2011 - 0.1 - In the beginning...
+*/
+
+/*
+ ***************************************************************************************************
+ * Global settings, affecting the entire page:
+ */
+body {
+  text-align: center;
+  width: 100%;
+  background-color: #fafafa;
+  font-family: Arial,Verdana,Tahoma;
+}
+h1, h2, h3, p, ul, pre {
+  text-align: left;
+}
+body, p, div, img, h1, h2, h3 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #5a5ab8;
+}
+a:hover {
+  background-color: #eee;
+}
+/* Centred 1240px-wide box for everything */
+#everything {
+  margin: 0 auto 0 auto;
+  text-align: left;
+  border: 0;
+  padding: 0;
+  width: 1240px;
+  min-width: 1240px;
+  font-size: 14px;
+}
+/* Tool tip popup box */
+#tool-tip {
+  padding: 3px;
+  border: 1px solid #87c0d7;
+  display: none;
+  background: #e0edfb;
+  color: #006699;
+  font-size: 11px;
+  max-width: 370px;
+  text-align: left;
+  position: absolute;
+  z-index: 1000;
+}
+
+/***************************************************************************************************
+ * The top-bar (site title, busy bee, etc)
+ */
+#head {
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: 110px;
+  background-image: url(images/busybee.jpg);
+}
+/* Box for site title */
+#head > div {
+  padding: 27px 0 0 40px;
+}
+/* Site title text */
+#head > div > p:first-child {
+  font-family: Georgia, Sans-Serif, Verdana;
+  font-size: 40px;
+  font-style: italic;
+  line-height: 1em;
+  color: #ddd;
+}
+/* Site subtitle text */
+#head > div > p {
+  font-size: 11px;
+  line-height: 1em;
+  color: #aaa;
+}
+
+
+/***************************************************************************************************
+ * Main screen area (i.e not the top, bottom or side bars)
+ */
+#main {
+  text-align: center;
+  margin: 0 20px 10px 20px;
+  width: 925px;
+  float: left;
+}
+
+/* Post header (avatar and h1 & p to the right of it) */
+div.post-head {
+  padding: 0 0 1em 0;
+  height: 80px;
+}
+/* Post author avatar */
+div.post-head > img {
+  float: left;
+}
+/* Box for post title (containing the only h1 tag on the page) */
+div.post-head > div {
+  float: left;
+  padding: 10px 0 0 1em;
+}
+/* Post metadata: date, categories, edit link etc */
+div.post-head > div > p {
+  font-size: 11px;
+}
+
+/* Comment box */
+div.comment {
+  text-align: left;
+  margin: 0;
+  border: 1px solid #aaa;
+  padding: 1em;
+}
+
+/* Box for commenter's avatar name & timestamp */
+div.comment-head {
+  height: 55px;
+}
+/* Commenter's avatar */
+div.comment-head > img {
+  float: left;
+}
+/* Box for commenter's name & comment timestamp */
+div.comment-head > div {
+  margin: 5px 0 0 10px;
+  float: left;
+}
+/* Commenter's name */
+div.comment-head > div > p {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+/* Timestamp link */
+div.comment-head > div > a {
+  font-size: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reply link */
+div.comment-main > a {
+  font-size: 11px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* Nested comment (i.e replies) */
+div.comment-main > div.comment {
+  margin: 1em 0 0 0;
+  border: 1px solid #aaa;
+  padding: 1em;
+}
+
+/* The main body of the post/comment */
+div.post-main, div.comment-main {
+  clear: both;
+}
+/* Bullet lists */
+div.post-main > ul, div.comment-main > ul {
+  margin: 0;
+  border: 0;
+  padding: 0 0 0 2em;
+}
+/* Post/comment paragraphs & lists */
+div.post-main > p, div.comment-main > p, div.post-main > ul > li, div.comment-main > ul > li {
+  line-height: 1.4em;
+  padding: 0 0 1em 0;
+}
+
+/* Table stuff */
+div.post-main > table, div.comment-main > table {
+  border: 0;
+  border-collapse: collapse;
+  margin: 0 auto 1em auto;
+  min-width: 50%;
+}
+div.post-main > table > tbody > tr, div.comment-main > table > tbody > tr {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+div.post-main > table > tbody > tr > th, div.comment-main > table > tbody > tr > th {
+  margin: 0;
+  border: 1px solid #aaa;
+  padding: 5px 1em;
+  background-color: #ddd;
+}
+div.post-main > table > tbody > tr > td, div.comment-main > table > tbody > tr > td {
+  border: 1px solid #aaa;
+  padding: 5px 1em;
+  background-color: #eee;
+}
+
+/* Code blocks */
+div.post-main > pre, div.comment-main > pre {
+  margin: 0 0 1em 0;
+  border: 1px solid #aaa;
+  padding: 15px 20px;
+  background-color: #eee;
+}
+
+/* Quotes */
+div.quote {
+  margin: 0 0 1em 0;
+  border: 1px solid #aaa;
+  padding: 5px 20px;
+  background-color: #eee;
+}
+div.quote > p {
+  line-height: 1.4em;
+  padding: 0.5em 0 0.5em 0;
+}
+
+/* Centered images */
+img.aligncenter {
+  margin: 0 auto 1em auto;
+  display: block;
+}
+div.aligncenter {
+  margin: 0 auto 1em auto;
+}
+div.aligncenter > p {
+  text-align: center;
+  font-style: italic;
+  padding: 0;
+}
+
+/* Float-left images */
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+div.alignleft {
+  float:left;
+  margin: 0 1em 1em 0;
+}
+div.alignleft > p {
+  text-align: center;
+  font-style: italic;
+  padding: 0;
+}
+
+/* Float-right images */
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+div.alignright {
+  float:right;
+  margin: 0 0 1em 1em;
+}
+div.alignright > p {
+  text-align: center;
+  font-style: italic;
+  padding: 0;
+}
+
+
+/*
+ ***************************************************************************************************
+ * Sidebar
+ */
+#side {
+  margin: 0 20px 10px 0;
+  width: 255px;
+  float: left;
+  font-size: 12px;
+}
+
+/* Search box */
+input {
+  width: 100%;
+}
+form {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+form > table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border-collapse: collapse;
+  background-color: inherit;
+}
+form > table > tbody {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+}
+form > table > tbody > tr {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+}
+form > table > tbody > tr > td {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 25%;
+  background-color: inherit;
+}
+form > table > tbody > tr > td:first-child {
+  margin: 0;
+  border: 0;
+  padding: 0 10px 0 0;
+  width: 75%;
+  background-color: inherit;
+}
+
+/* Side-bar grey boxes */
+#side > ul {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#side > ul > li:first-child {
+  margin: 10px 10px 10px 0;
+  border: 0;
+  padding: 0 20px 0 20px;
+  background:url(images/rss.gif) left center no-repeat;
+}
+#side > ul > li {
+  margin: 0 0 10px 0;
+  border: 0;
+  padding: 0;
+  background-color: #eee;
+  list-style: none;
+}
+#side > ul > li > p {
+  font-size: 20px;
+  background-color: #ddd;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+}
+
+/* Each box's categories */
+#side > ul > li > ul {
+  margin: 0 0 0 25px;
+  padding: 0;
+}
+#side > ul > li > ul a:hover {
+  background-color: #ddd;
+}
+#side > ul > li > ul > li {
+  margin: 0;
+  padding: 0 0 10px 0;
+  list-style: square url("images/fav.gif");;
+}
+
+/* Each box's subcategories */
+#side > ul > li > ul > li > ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+#side > ul > li > ul > li > ul > li {
+  margin: 0 0 5px 0;
+  padding: 0;
+  list-style: square url("images/fav.gif");;
+}
+
+
+/*
+ ***************************************************************************************************
+ * Bottom bar
+ */
+#tail {
+  width: 100%;
+  height: 110px;
+  background-color: #f00;
+  clear: both;
+}
