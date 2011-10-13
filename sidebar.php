@@ -25,7 +25,7 @@
 				</table>
 			</form>
 			<ul>
-				<li>Subscribe: <a href="<?php bloginfo('rss2_url');?>" title="Subscribe to pages & postings">Entries</a> | <a href="<?php bloginfo('comments_rss2_url');?>" title="Subscribe to comments">Comments</a></li>
+				<li>Subscribe: <a href="<?php bloginfo('rss2_url');?>" title="Subscribe to pages &amp; postings">Entries</a> | <a href="<?php bloginfo('comments_rss2_url');?>" title="Subscribe to comments">Comments</a></li>
 				<li>
 					<p>Projects</p>
 					<ul>

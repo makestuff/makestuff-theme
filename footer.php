@@ -8,7 +8,7 @@
 				<p>&copy; <?php echo date('Y'); ?> Chris McClelland</p>
 			</div>
 			<div class="credits">
-				<p>Powered by <a href="http://wordpress.org">WordPress</a> & <a href="http://github.com/makestuff/wordpress">MakeStuff</a> theme, with <a href="http://www.famfamfam.com/lab/icons/silk/">Silk icons</a></p>
+				<p>Powered by <a href="http://wordpress.org">WordPress</a> &amp; <a href="http://github.com/makestuff/wordpress">MakeStuff</a> theme, with <a href="http://www.famfamfam.com/lab/icons/silk/">Silk icons</a></p>
 			</div>
 		</div>
 	</div>

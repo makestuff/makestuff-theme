@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title><?php the_title();?></title>
-<meta name="description" content="<?php echo get_post_meta($wp_query->post->ID, "description", true);?></meta>
+<meta name="description" content="<?php echo get_post_meta($wp_query->post->ID, "description", true);?>"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name');?> RSS Feed" href="<?php bloginfo('rss2_url');?>"/>
 <style type="text/css">
