@@ -25,10 +25,19 @@ body {
 h1, h2, h3, p, ul, pre {
   text-align: left;
 }
-body, p, div, img, h1, h2, h3 {
+html, body, p, div, img, h1, h2, h3 {
   margin: 0;
   border: 0;
   padding: 0;
+}
+p, b, pre, div.quote, ul, table {
+  color: #333;
+}
+h1, h2, h3 {
+  font-weight: normal;
+}
+h1 > a {
+  color: #000;
 }
 a {
   text-decoration: none;
@@ -100,6 +109,46 @@ a:hover {
   float: left;
 }
 
+/* Page navigation */
+.pagenav {
+  border-spacing:5px;
+  border:0px;
+  padding:0px;
+  margin:10px auto 0 auto;
+  background-color:#fafafa;
+  min-width:0px;
+}
+.pagenav td {
+  border:1px solid #ccc;
+  padding:0px;
+  margin:0px;
+}
+.pagenav td.sel {
+  border:1px solid #87c0d7;
+  padding:0px;
+  margin:0px;
+}
+a.sel {
+  display:block;
+  font-size:1.1em;
+  font-weight:bold;
+  color:#006699;
+  background-color:#e0edfb;
+  text-decoration:none;
+}
+a.lnk {
+  display:block;
+  font-size:1.1em;
+  font-weight:bold;
+  color:#006699;
+  background-color:#ffffff;
+  text-decoration:none;
+}
+a.lnk:hover {
+  background-color:#006699;
+  color:#f8f7e9;
+}
+
 /* Post header (avatar and h1 & p to the right of it) */
 div.post-head {
   padding: 0 0 1em 0;
@@ -120,9 +169,10 @@ div.post-head > div > p {
 }
 
 /* Comment box */
-div.comment {
+div.comment, div#respond {
   text-align: left;
-  margin: 0;
+  clear: both;
+  margin: 1em 0 0em 0;
   border: 1px solid #aaa;
   padding: 1em;
 }
@@ -134,10 +184,11 @@ div.comment-head {
 /* Commenter's avatar */
 div.comment-head > img {
   float: left;
+  margin: 0 10px 0 0;
 }
 /* Box for commenter's name & comment timestamp */
 div.comment-head > div {
-  margin: 5px 0 0 10px;
+  margin: 5px 0 0 0;
   float: left;
 }
 /* Commenter's name */
@@ -157,25 +208,19 @@ div.comment-head > div > a {
 /* Reply link */
 div.comment-main > a {
   font-size: 11px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-
-/* Nested comment (i.e replies) */
-div.comment-main > div.comment {
-  margin: 1em 0 0 0;
-  border: 1px solid #aaa;
-  padding: 1em;
 }
 
 /* The main body of the post/comment */
 div.post-main, div.comment-main {
   clear: both;
 }
+div.post-main {
+  margin: 0 0 50px 0;
+}
+
 /* Bullet lists */
 div.post-main > ul, div.comment-main > ul {
-  margin: 0;
+  margin: 0.5em 0;
   border: 0;
   padding: 0 0 0 2em;
 }
@@ -208,6 +253,38 @@ div.post-main > table > tbody > tr > td, div.comment-main > table > tbody > tr >
   padding: 5px 1em;
   background-color: #eee;
 }
+
+/* Comment form */
+#commentform > p {
+  clear: both;
+  padding: 0.5em 0;
+  font-size: 11px;
+}
+#commentform > table {
+  font-size: 11px;
+  text-align: left;
+  width: auto;
+  margin: 0.5em 0 0 0;
+}
+#commentform > table > tbody > tr > td {
+  text-align: right;
+}
+#commentform > p > label {
+  vertical-align: top;
+}
+textarea {
+  border: 1px solid #aaa;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  min-width: 100%;
+  max-width: 100%;
+}
+a#cancel-comment-reply-link {
+  font-size: 11px;
+  font-weight: normal;
+  float: right;
+}
+
 
 /* Code blocks */
 div.post-main > pre, div.comment-main > pre {
@@ -287,14 +364,45 @@ div.alignright > p {
 
 /* Search box */
 input {
-  width: 100%;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  padding: 0;
+  margin: 0;
+  height: 22px;
 }
-form {
+input#subscribe {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  height: auto;
+}
+input#submit {
+  padding: 0 10px;
+}
+input#submit:hover, input#search:hover {
+  background-color: #ddd;
+}
+input.textbox {
+  background-color: #fff;
+  height: 20px;
+}
+input::-moz-focus-inner {
+  /* Remove button padding in FF */
+  border: 0;
+  padding: 0;
+}
+
+div#side > table {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 6px 0;
+}
+div#side > form {
   margin: 0;
   border: 0;
   padding: 0;
 }
-form > table {
+div#side > form > table {
   width: 100%;
   margin: 0;
   border: 0;
@@ -302,31 +410,31 @@ form > table {
   border-collapse: collapse;
   background-color: inherit;
 }
-form > table > tbody {
+div#side > form > table > tbody {
   margin: 0;
   border: 0;
   padding: 0;
   background-color: inherit;
 }
-form > table > tbody > tr {
+div#side > form > table > tbody > tr {
   margin: 0;
   border: 0;
   padding: 0;
   background-color: inherit;
 }
-form > table > tbody > tr > td {
+div#side > form > table > tbody > tr > td {
   margin: 0;
   border: 0;
   padding: 0;
   width: 25%;
   background-color: inherit;
 }
-form > table > tbody > tr > td:first-child {
-  margin: 0;
-  border: 0;
-  padding: 0 10px 0 0;
+div#side > form > table > tbody > tr > td > input {
+  width: 100%;
+}
+div#side > form > table > tbody > tr > td:first-child {
+  padding: 0 3px 0 0;
   width: 75%;
-  background-color: inherit;
 }
 
 /* Side-bar grey boxes */
@@ -336,9 +444,9 @@ form > table > tbody > tr > td:first-child {
   padding: 0;
 }
 #side > ul > li:first-child {
-  margin: 10px 10px 10px 0;
+  margin: 10px 0 10px 34px;
+  padding: 0 0 0 20px;
   border: 0;
-  padding: 0 20px 0 20px;
   background:url(images/rss.gif) left center no-repeat;
 }
 #side > ul > li {
@@ -365,7 +473,7 @@ form > table > tbody > tr > td:first-child {
 }
 #side > ul > li > ul > li {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
   list-style: square url("images/fav.gif");;
 }
 
@@ -387,7 +495,26 @@ form > table > tbody > tr > td:first-child {
  */
 #tail {
   width: 100%;
-  height: 110px;
-  background-color: #f00;
+  height: 75px;
+  background-color: #eee;
   clear: both;
+  margin: 0 0 20px 0;
+}
+#tail > div.licence-img {
+  float: left;
+  padding: 22px 0 0 39px;
+}
+#tail > div.copyright {
+  float: left;
+  padding: 31px 0 0 10px;
+}
+#tail > div.copyright > p {
+  font-size: 11px;
+}
+#tail > div.credits {
+  float: right;
+  padding: 31px 39px 0 0;
+}
+#tail > div.credits > p {
+  font-size: 11px;
 }
