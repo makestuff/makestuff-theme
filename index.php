@@ -35,7 +35,7 @@
 				}
 			?>
 			<div class="post-head">
-				<img src="http://www.gravatar.com/avatar/<?php echo md5(get_the_author_email());?>" width="80" height="80" alt=""/>
+				<?php if(!is_search()){?><img src="http://www.gravatar.com/avatar/<?php echo md5(get_the_author_email());?>" width="80" height="80" alt=""/><?php }?>
 				<div>
 					<h1><a href="<?php the_permalink();?>" title="<?php echo get_post_meta($post->ID, "description", true);?>"><?php the_title();?></a></h1>
 					<?php if(is_page()):?>
@@ -45,8 +45,9 @@
 					<?php endif;?>
 				</div>
 			</div>
-			<div class="post-main">
-				<?php
+			<?php
+				if ( !is_search() ) {
+					echo "<div class=\"post-main\">";
 					the_content();
 					if ( !get_post_meta($id, "pagetype", true) ) {
 						$projects = get_posts("post_parent=".$id."&post_type=page&orderby=menu_order&order=ASC&showposts=100");
@@ -63,8 +64,9 @@
 							echo "</ul>\n";
 						}
 					}
-				?>
-			</div>
+					echo "</div>";
+				}
+			?>
 			<?php if(is_page()) echo $navTable;?>
 			<?php
 				if (

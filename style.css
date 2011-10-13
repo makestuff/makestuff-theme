@@ -157,11 +157,12 @@ div.post-head {
 /* Post author avatar */
 div.post-head > img {
   float: left;
+  padding: 0 15px 0 0;
 }
 /* Box for post title (containing the only h1 tag on the page) */
 div.post-head > div {
   float: left;
-  padding: 10px 0 0 1em;
+  padding: 10px 0 0 0;
 }
 /* Post metadata: date, categories, edit link etc */
 div.post-head > div > p {

@@ -20,15 +20,15 @@ a:hover{background-color:#eee}
 #head > div > p:first-child{font-family:Georgia, Sans-Serif, Verdana;font-size:40px;font-style:italic;line-height:1em;color:#ddd}
 #head > div > p{font-size:11px;line-height:1em;color:#aaa}
 #main{text-align:center;width:925px;float:left;margin:0 20px 10px}
-.pagenav{border-spacing:5px;border:0;background-color:#fafafa;min-width:0;margin:10px auto 0 auto;padding:0}
+.pagenav{border-spacing:5px;border:0;background-color:#fafafa;min-width:0;margin:10px auto 0;padding:0}
 .pagenav td{border:1px solid #ccc;margin:0;padding:0}
 .pagenav td.sel{border:1px solid #87c0d7;margin:0;padding:0}
 a.sel{display:block;font-size:1.1em;font-weight:700;color:#069;background-color:#e0edfb;text-decoration:none}
 a.lnk{display:block;font-size:1.1em;font-weight:700;color:#069;background-color:#fff;text-decoration:none}
 a.lnk:hover{background-color:#069;color:#f8f7e9}
 div.post-head{height:80px;padding:0 0 1em}
-div.post-head > img{float:left}
-div.post-head > div{float:left;padding:10px 0 0 1em}
+div.post-head > img{float:left;padding:0 15px 0 0}
+div.post-head > div{float:left;padding:10px 0 0}
 div.comment,div#respond{text-align:left;clear:both;border:1px solid #aaa;margin:1em 0 0;padding:1em}
 div.comment-head{height:55px}
 div.comment-head > img{float:left;margin:0 10px 0 0}
