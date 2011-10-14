@@ -30,7 +30,7 @@
 
 <?php
 $fields =  array(
-	'author' => '<fieldset><table><tr><td><label for="author">'.__('Name').' (required):</label></td><td><input id="author" class="textbox" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30"/></td></tr>',
+	'author' => '<table><tr><td><label for="author">'.__('Name').' (required):</label></td><td><input id="author" class="textbox" name="author" type="text" value="'.esc_attr($commenter['comment_author']).'" size="30"/></td></tr>',
 	'email'  => '<tr><td><label for="email">'.__('Email').' (required):</label></td><td><input id="email" class="textbox" name="email" type="text" value="'.esc_attr($commenter['comment_author_email']).'" size="30"/></td></tr>',
 	'url'    => '<tr><td><label for="url">'.__('Website').':</label></td><td><input id="url" class="textbox" name="url" type="text" value="'.esc_attr($commenter['comment_author_url']).'" size="30"/></td></tr></table>'
 );
@@ -38,7 +38,7 @@ comment_form(
 	array(
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
-		'comment_field' => '<p>You may use TWiki syntax in your comment. Your email address will not be published.</p><textarea id="comment" name="comment" cols="45" rows="8"></textarea></fieldset>',
+		'comment_field' => '<p>You may use TWiki syntax in your comment. Your email address will not be published.</p><div><textarea id="comment" name="comment" cols="45" rows="8"></textarea></div>',
 		'fields' => $fields
 	)
 );
