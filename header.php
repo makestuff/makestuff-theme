@@ -8,16 +8,19 @@
 <style type="text/css">
 body{text-align:center;width:100%;background-color:#fafafa;font-family:Arial,Verdana,Tahoma}
 h1,h2,h3,p,ul,pre{text-align:left}
-p,b,pre,div.quote,ul,table{color:#333}
-h1,h2,h3{font-weight:400}
-h1 > a{color:#000}
+p,b,pre,div.quote,ul,table{color:#444}
+h1,h2,h3{font-weight:700;color:#444}
+h3{font-size:14px}
+h1 > a{color:#444}
 a{text-decoration:none;color:#5a5ab8}
 a:hover{background-color:#eee}
 #everything{text-align:left;border:0;width:1240px;min-width:1240px;font-size:14px;margin:0 auto;padding:0}
 #tool-tip{border:1px solid #87c0d7;display:none;background:#e0edfb;color:#069;font-size:11px;max-width:370px;text-align:left;position:absolute;z-index:1000;padding:3px}
-#head{width:100%;height:110px;background-image:url(images/busybee.jpg);margin:0 0 10px}
+#head{width:100%;height:110px;background-image:url(/wordpress/images/busybee.jpg);margin:0 0 10px}
 #head > div{padding:27px 0 0 40px}
 #head > div > p:first-child{font-family:Georgia, Sans-Serif, Verdana;font-size:40px;font-style:italic;line-height:1em;color:#ddd}
+#head > div > p:first-child > a{color:inherit}
+#head > div > p:first-child > a:hover{text-decoration:none;background-color:inherit}
 #head > div > p{font-size:11px;line-height:1em;color:#aaa}
 #main{text-align:center;width:925px;float:left;margin:0 20px 10px}
 .pagenav{border-spacing:5px;border:0;background-color:#fafafa;min-width:0;margin:10px auto 0;padding:0}
@@ -26,6 +29,7 @@ a:hover{background-color:#eee}
 a.sel{display:block;font-size:1.1em;font-weight:700;color:#069;background-color:#e0edfb;text-decoration:none}
 a.lnk{display:block;font-size:1.1em;font-weight:700;color:#069;background-color:#fff;text-decoration:none}
 a.lnk:hover{background-color:#069;color:#f8f7e9}
+div.center > h2{text-align:center;padding:0 0 1em 0}
 div.post-head{height:80px;padding:0 0 1em}
 div.post-head > img{float:left;padding:0 15px 0 0}
 div.post-head > div{float:left;padding:10px 0 0}
@@ -35,10 +39,18 @@ div.comment-head > img{float:left;margin:0 10px 0 0}
 div.comment-head > div{float:left;margin:5px 0 0}
 div.comment-head > div > p{font-size:16px;font-weight:700;margin:0;padding:0}
 div.comment-head > div > a{font-size:11px;margin:0;padding:0}
-div.post-main,div.comment-main{clear:both}
+div.post-head,div.post-main,div.post-comments,div.comment-main{clear:both}
 div.post-main{margin:0 0 50px}
 div.post-main > ul,div.comment-main > ul{border:0;margin:.5em 0;padding:0 0 0 2em}
 div.post-main > p,div.comment-main > p,div.post-main > ul > li,div.comment-main > ul > li{line-height:1.4em;padding:0 0 1em}
+div.scrolly{border:0;margin:0 0 1em 0;padding:0;overflow:hidden}
+div.scrolly > img{float:left;margin:0 10px 0 0}
+div.scrolly > div{float:left;overflow:auto;margin:0;border:0;padding:0}
+div.scrolly > div > img{margin:0 0 10px 0;border:0}
+table.downloads{width:75%}
+table.downloads > tbody > tr > td {text-align:left}
+table.downloads > tbody > tr > td > img{margin:0 10px -2px 0}
+img.inline{margin:0 0 -4px 0}
 div.post-main > table,div.comment-main > table{border:0;border-collapse:collapse;min-width:50%;margin:0 auto 1em}
 div.post-main > table > tbody > tr,div.comment-main > table > tbody > tr{text-align:center;margin:0;padding:5px}
 div.post-main > table > tbody > tr > th,div.comment-main > table > tbody > tr > th{border:1px solid #aaa;background-color:#ddd;margin:0;padding:5px 1em}
@@ -52,7 +64,7 @@ a#cancel-comment-reply-link{font-size:11px;font-weight:400;float:right}
 div.post-main > pre,div.comment-main > pre{border:1px solid #aaa;background-color:#eee;margin:0 0 1em;padding:15px 20px}
 div.quote{border:1px solid #aaa;background-color:#eee;margin:0 0 1em;padding:5px 20px}
 div.quote > p{line-height:1.4em;padding:.5em 0}
-img.aligncenter{display:block;margin:0 auto 1em}
+iframe,img.aligncenter{display:block;margin:0 auto 1em}
 div.aligncenter{margin:0 auto 1em}
 #side{width:255px;float:left;font-size:12px;margin:0 20px 10px 0}
 input{background-color:#eee;border:1px solid #aaa;height:22px;margin:0;padding:0}
@@ -65,17 +77,18 @@ div#side > form > table{width:100%;border:0;border-collapse:collapse;background-
 div#side > form > table > tbody > tr > td{border:0;width:25%;background-color:inherit;margin:0;padding:0}
 div#side > form > table > tbody > tr > td > input{width:100%}
 div#side > form > table > tbody > tr > td:first-child{width:75%;padding:0 3px 0 0}
-#side > ul > li:first-child{border:0;background:url(images/rss.gif) left center no-repeat;margin:10px 0 10px 34px;padding:0 0 0 20px}
+#side > ul > li:first-child{border:0;background:url(/wordpress/images/rss.gif) left center no-repeat;margin:10px 0 10px 34px;padding:0 0 0 20px}
 #side > ul > li{border:0;background-color:#eee;list-style:none;margin:0 0 10px;padding:0}
 #side > ul > li > p{font-size:20px;background-color:#ddd;margin:0 0 10px;padding:5px 10px}
 #side > ul > li > ul{margin:0 0 0 25px;padding:0}
-#side > ul > li > ul > li{list-style:square url(images/fav.gif);margin:0;padding:0 0 5px}
+#side > ul > li > ul > li{list-style:square url(/wordpress/images/fav.gif);margin:0;padding:0 0 5px}
 #side > ul > li > ul > li > ul{margin:5px 0 0 20px;padding:0}
-#side > ul > li > ul > li > ul > li{list-style:square url(images/fav.gif);margin:0 0 5px;padding:0}
+#side > ul > li > ul > li > ul > li{list-style:square url(/wordpress/images/fav.gif);margin:0 0 5px;padding:0}
 #tail{width:100%;height:75px;background-color:#eee;clear:both;margin:0 0 20px}
-#tail > div.licence-img{float:left;padding:22px 0 0 39px}
-#tail > div.copyright{float:left;padding:31px 0 0 10px}
-#tail > div.credits{float:right;padding:31px 39px 0 0}
+#tail > div.licence-img{float:left;padding:22px 10px 0 20px;clear:none}
+#tail > div.copyright{float:left;padding:31px 0 0 0;clear:none}
+#tail > div.credits{float:right;padding:31px 0 0 0;clear:none}
+#tail > div.adfree{float:right;padding:16px 20px 0 10px;clear:none}
 html,body,p,div,img,h1,h2,h3,div#side > form,#side > ul{border:0;margin:0;padding:0}
 div.post-head > div > p,div.comment-main > a,#tail > div.copyright > p,#tail > div.credits > p{font-size:11px}
 div.aligncenter > p,div.alignleft > p,div.alignright > p{text-align:center;font-style:italic;padding:0}
@@ -95,7 +108,7 @@ addComment={moveForm:function(d,f,i,c){var m=this,a,h=m.I(d),b=m.I(i),l=m.I("can
 	<div id="everything">
 		<div id="head">
 			<div>
-				<p>MakeStuff</p>
+				<p><a href="/wordpress/">MakeStuff</a></p>
 				<p>Make stuff, not war!</p>
 			</div>
 		</div>
