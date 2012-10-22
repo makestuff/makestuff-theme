@@ -18,7 +18,7 @@
 					} else if ( get_post_meta(get_post($id)->post_parent, "pagetype", true) == "INTRO" ) {
 						$navTable .= "\n<table class=\"pagenav\">\n  <tr>\n";
 						$pid = get_post($id)->post_parent;
-						$navTable .= "    <td><a class=\"lnk\" href=\"".get_page_link($pid)."\" title=\"".get_the_title($pid)." &raquo; Introduction\"\">&nbsp;1&nbsp;</a></td>\n";
+						$navTable .= "    <td><a class=\"lnk\" href=\"".get_page_link($pid)."\" title=\"".get_the_title($pid)." &raquo; Introduction\">&nbsp;1&nbsp;</a></td>\n";
 						$children = get_posts("post_parent=$pid&post_type=page&orderby=menu_order&order=ASC&showposts=100");
 						$navButtonIndex = 2;
 						foreach ( $children as $child ) {

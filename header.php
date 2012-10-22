@@ -69,6 +69,7 @@ div.aligncenter{margin:0 auto 1em}
 #side{width:255px;float:left;font-size:12px;margin:0 20px 10px 0}
 input{background-color:#eee;border:1px solid #aaa;height:22px;margin:0;padding:0}
 input#subscribe{border:0;height:auto;margin:0;padding:0}
+input#cl_check_03e{border:0;height:auto;margin:0;padding:0}
 input#submit{padding:0 10px}
 input.textbox{background-color:#fff;height:20px}
 input::-moz-focus-inner{border:0;padding:0}

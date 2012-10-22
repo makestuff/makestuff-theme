@@ -308,7 +308,7 @@ div.quote > p {
 }
 
 /* Centered images */
-img.aligncenter {
+iframe, img.aligncenter {
   margin: 0 auto 1em auto;
   display: block;
 }
