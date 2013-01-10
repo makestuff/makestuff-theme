@@ -6,10 +6,6 @@
 					<td>|</td>
 					<td><a href="<?php bloginfo('url');?>?page_id=2">About</a></td>
 					<td>|</td>
-					<td><?php wp_loginout();?></td>
-					<td>|</td>
-					<td><?php wp_register("", "");?></td>
-					<td>|</td>
 				</tr>
 			</table>
 			<form action="<?php bloginfo('url');?>" method="get">
