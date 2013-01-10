@@ -1,0 +1,9 @@
+-------------------------- MAKESTUFF WORDPRESS THEME ---------------------------
+
+A lightweight theme used by http://www.makestuff.eu. This is not intended to be
+generally useful to other people, since it contains a lot of hard-coded stuff
+that only makes sense in the context of http://www.makestuff.eu. That said,
+unless otherwise noted, the files in this project may be used under the terms of
+the GPLv3 (see COPYING for details).
+
+Chris McClelland 2013-01-10
